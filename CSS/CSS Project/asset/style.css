@@ -212,13 +212,67 @@ a{
 
 .music-player{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
-.album{
-    width: 25%;
+
+.album {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 6px;
+  width: 25%;
+  margin-left: 1.1rem;
 }
+
+/* Image */
+.poster-info {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Text */
+.album-text {
+  flex: 1;
+  line-height: 1.2;
+}
+
+.album-text h4 {
+  margin: 0;
+  font-size: 14px;
+  margin-right: 10;
+}
+
+.album-text p {
+  margin: 0;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Icons */
+.album-icons {
+  display: flex;
+  gap: 10px;
+  margin-right: 0px;
+  padding-right: 11rem;
+}
+
+.info-icon {
+  font-size: 1rem;
+  color: #b3b3b3;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.info-icon:hover {
+  color: #1db954;
+  transform: scale(1.1);
+}
+
+
 
 .player{
     width: 50%;
@@ -254,7 +308,7 @@ a{
 }
 
 .progress-bar{
-    width: 70%;
+    width: 65%;
     appearance: none;
     background-color: transparent;
     cursor: pointer;
@@ -272,5 +326,58 @@ a{
     width: 1rem;
     background-color: #1bd760;
     border-radius: 50%;
-    margin-top: -6px;
+    margin-top: -7px;
 }
+
+.volume {
+  appearance: none;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(to right, #1bd760 40%, #555 40%);
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Slider ball */
+.volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #1bd760;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.volume::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  background: #1bd760;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.right-control {
+  display: flex;        /* makes them line up in a row */
+  flex-direction: row; /* default, but force it */
+  align-items: center;
+  gap: 0.5rem;            /* spacing between icons */
+  margin-left: 5rem;
+}
+
+.right-icon{
+  font-size: 1rem;
+  color: #b3b3b3;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.right-icon:hover {
+  color: #1db954;
+  transform: scale(1.1);
+}
+
+
+
+
+
